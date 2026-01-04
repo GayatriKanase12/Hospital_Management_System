@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital management website</title>
+
+    <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+
+    <header>
+        
+        <div class="logo"><img src="images/logo3.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Service</a>
+            <a href="Specilties.html">Specialists</a>
+            <a href="Gallary.html">Gallery</a>
+            <a href="Patient Details.html">Patient Details</a>
+            <a href="Our Team.html">Our Team</a>
+            
+        </nav>
+
+        <div class="right-icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+           
+        </div>
+
+    </header>
+
+    <!-- header section ended -->
+
+    <!-- Home section started -->
+
+        <div class="main-home">
+
+            <div class="home">
+                <div class="home-left-content">
+                    <span></span>
+                    <h2>We take care our<br> Patients Healths</h2>
+                    <p class="lorem"></p>
+                
+                        <div class="home-btn">
+                             <a class="homebtnsec" href="">Appointment</a>
+                        </div>
+                        
+                    </div>
+
+                <div class="home-right-content">
+                    <img src="images/hero2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="technology">
+            <div class="main-technology">
+                
+                
+            </div>
+        </div>
+
+    <!-- home section ends -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Appointment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/blurbg1.jpg');
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 650px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.88);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.3);
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      color: #006666;
+      font-size: 42px;
+    }
+    label {
+      display: block;
+      margin: 20px 0 8px;
+      font-weight: 600;
+      color: #333;
+      font-size: 18px;
+    }
+    input, select {
+      width: 100%;
+      padding: 14px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      font-size: 17px;
+    }
+    input:focus, select:focus {
+      border-color: #006666;
+      outline: none;
+    }
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 15px;
+      background-color: #006666;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 20px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #004d4d;
+    }
+    table {
+      width: 90%;
+      margin: 30px auto;
+      border-collapse: collapse;
+      background: white;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 12px;
+      text-align: center;
+    }
+    .btn-edit, .btn-delete {
+      padding: 6px 12px;
+      margin: 2px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    .btn-edit {
+      background-color: #ffc107;
+    }
+    .btn-delete {
+      background-color: #dc3545;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Book an Appointment</h2>
+    <form id="appointmentForm">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required pattern="[A-Za-z\s]+" title="Only alphabets allowed">
+
+      <label for="mobile">Mobile Number</label>
+      <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required pattern="[0-9]{10}" title="Enter a valid 10-digit number">
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="department">Department</label>
+      <select id="department" name="department" required>
+        <option value="">--Select Department--</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Dermatology">Dermatology</option>
+      </select>
+
+      <label for="doctor">Doctor</label>
+      <input type="text" id="doctor" name="doctor" placeholder="Preferred doctor name" required>
+
+      <label for="date">Appointment Date</label>
+      <input type="date" id="date" name="date" required>
+
+      <button type="submit">Submit Appointment</button>
+    </form>
+  </div>
+
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Department</th>
+        <th>Doctor</th>
+        <th>Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    const form = document.getElementById('appointmentForm');
+    const tableBody = document.querySelector('#dataTable tbody');
+    let editIndex = null;
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = form.name.value.trim();
+      const mobile = form.mobile.value.trim();
+      const email = form.email.value.trim();
+      const department = form.department.value;
+      const doctor = form.doctor.value.trim();
+      const date = form.date.value;
+
+      if (!/^[A-Za-z\s]+$/.test(name)) {
+        alert("Name should contain only letters.");
+        return;
+      }
+
+      const rowData = `
+        <td>${name}</td>
+        <td>${mobile}</td>
+        <td>${email}</td>
+        <td>${department}</td>
+        <td>${doctor}</td>
+        <td>${date}</td>
+        <td>
+          <button class="btn-edit" onclick="editRow(this)">Edit</button>
+          <button class="btn-delete" onclick="deleteRow(this)">Delete</button>
+        </td>
+      `;
+
+      if (editIndex === null) {
+        const row = document.createElement('tr');
+        row.innerHTML = rowData;
+        tableBody.appendChild(row);
+      } else {
+        tableBody.rows[editIndex].innerHTML = rowData;
+        editIndex = null;
+      }
+
+      form.reset();
+    });
+
+    function editRow(button) {
+      const row = button.parentElement.parentElement;
+      editIndex = row.rowIndex - 1;
+
+      const cells = row.children;
+      form.name.value = cells[0].textContent;
+      form.mobile.value = cells[1].textContent;
+      form.email.value = cells[2].textContent;
+      form.department.value = cells[3].textContent;
+      form.doctor.value = cells[4].textContent;
+      form.date.value = cells[5].textContent;
+    }
+
+    function deleteRow(button) {
+      const row = button.parentElement.parentElement;
+      tableBody.removeChild(row);
+      if (editIndex !== null) editIndex = null;
+    }
+  </script>
+
+</body>
+</html>
+
+
+ <!-- footer -->
+
+    
+   <div class="main-footer">
+        
+
+            <div class="footer-content">
+                
+                </div>
+            </div>
+
+            <div class="footer-content">
+               
+            </div>
+
+            <div class="footer-content">
+                
+            </div>
+
+            <div class="footer-content">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- footer ended -->
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
