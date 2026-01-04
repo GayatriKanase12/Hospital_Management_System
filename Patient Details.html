@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital management website</title>
+
+    <script src="https://kit.fontawesome.com/c1df782baf.js"></script>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body> 
+
+    <header>
+        
+        <div class="logo"><img src="images/logo3.png" alt=""></div>
+
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="Registration.html">Registration</a>
+            <a href="About.html">About</a>
+            <a href="Services.html">Service</a>
+            <a href="Specilties.html">Specialists</a>
+            <a href="Gallary.html">Gallery</a>
+            <a href="Patient Details.html">Patient Details</a>
+            <a href="Our Team.html">Our Team</a>
+            
+        </nav>
+
+        <div class="right-icons">
+            <div id="menu-bars" class="fas fa-bars"></div>
+           
+        </div>
+
+    </header>
+
+    <!-- header section ended -->
+
+    <!-- Home section started -->
+
+        <div class="main-home">
+
+            <div class="home">
+                <div class="home-left-content">
+                    <span></span>
+                    <h2>Patients All Details</h2>
+                    <p class="lorem"></p>
+                
+                      
+                        
+                    </div>
+
+                <div class="home-right-content">
+                    <img src="images/hero2.png" alt="">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="technology">
+            <div class="main-technology">
+                
+                
+            </div>
+        </div>
+
+    <!-- home section ends -->
+
+
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Patient Registration</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f0fdfd;
+      padding: 30px;
+    }
+
+    .form-container, .table-container {
+      max-width: 1000px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin: auto;
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #006666;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 10px;
+      font-size: 15px;
+      margin-top: 5px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    button {
+      background: #009999;
+      color: white;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #007777;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      margin-top: 20px;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #009999;
+      color: white;
+    }
+
+    .action-btn {
+      background: #0066cc;
+      color: white;
+      padding: 6px 10px;
+      margin-right: 5px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    .delete-btn {
+      background: #cc0000;
+    }
+
+    #detailsTable {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Patient Registration Form</h2>
+    <form id="registrationForm">
+      <input type="hidden" id="editIndex" value="-1">
+      
+      <label>Full Name</label>
+      <input type="text" id="name" required>
+
+      <label>Age</label>
+      <input type="number" id="age" required>
+
+      <label>Gender</label>
+      <select id="gender" required>
+        <option value="">-- Select Gender --</option>
+        <option>Male</option>
+        <option>Female</option>
+        <option>Other</option>
+      </select>
+
+      <label>Contact Number</label>
+      <input type="tel" id="contact" required>
+
+      <label>Address</label>
+      <textarea id="address" rows="2" required></textarea>
+
+      <label>City</label>
+      <select id="city" required>
+        <option value="">-- Select City --</option>
+        <option>Sangli</option>
+        <option>Kolhapur</option>
+        <option>Vita</option>
+      </select>
+
+      <label>Department</label>
+      <select id="department" required>
+        <option value="">-- Select Department --</option>
+        <option>Dentistry</option>
+        <option>Cardiology</option>
+        <option>Diabetology</option>
+        <option>Orthopedics</option>
+        <option>ENT</option>
+        <option>Gynecology</option>
+        <option>Dermatology</option>
+        <option>Pediatrics</option>
+      </select>
+
+      <label>Health Issue</label>
+      <textarea id="issue" rows="2" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="table-container" id="detailsTable">
+    <h2>Registered Patients</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Full Name</th>
+          <th>Age</th>
+          <th>Gender</th>
+          <th>Contact</th>
+          <th>City</th>
+          <th>Department</th>
+          <th>Health Issue</th>
+          <th>Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="patientTableBody"></tbody>
+    </table>
+  </div>
+
+  <script>
+    const form = document.getElementById("registrationForm");
+    const tableBody = document.getElementById("patientTableBody");
+    const detailsTable = document.getElementById("detailsTable");
+    const editIndex = document.getElementById("editIndex");
+
+    let patients = [];
+
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const age = parseInt(document.getElementById("age").value.trim());
+      const gender = document.getElementById("gender").value;
+      const contact = document.getElementById("contact").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const city = document.getElementById("city").value;
+      const department = document.getElementById("department").value;
+      const issue = document.getElementById("issue").value.trim();
+      const date = new Date().toLocaleDateString();
+
+      // Validation
+      if (!/^[a-zA-Z\s]+$/.test(name)) {
+        alert("Full name must contain only letters.");
+        return;
+      }
+
+      if (isNaN(age) || age <= 0 || age > 120) {
+        alert("Please enter a valid age between 1 and 120.");
+        return;
+      }
+
+      if (!/^\d{10}$/.test(contact)) {
+        alert("Contact number must be exactly 10 digits.");
+        return;
+      }
+
+      if (gender === "" || city === "" || department === "") {
+        alert("Please select gender, city and department.");
+        return;
+      }
+
+      if (address.length < 5) {
+        alert("Address must be at least 5 characters long.");
+        return;
+      }
+
+      if (issue.length < 5) {
+        alert("Please describe the health issue in more detail.");
+        return;
+      }
+
+      const patientData = {
+        name, age, gender, contact, address, city, department, issue, date
+      };
+
+      const index = parseInt(editIndex.value);
+      if (index >= 0) {
+        patients[index] = patientData;
+        editIndex.value = -1;
+      } else {
+        patients.push(patientData);
+      }
+
+      displayPatients();
+      form.reset();
+    });
+
+    function displayPatients() {
+      tableBody.innerHTML = "";
+      patients.forEach((patient, index) => {
+        const row = document.createElement("tr");
+
+        row.innerHTML = `
+          <td>${patient.name}</td>
+          <td>${patient.age}</td>
+          <td>${patient.gender}</td>
+          <td>${patient.contact}</td>
+          <td>${patient.city}</td>
+          <td>${patient.department}</td>
+          <td>${patient.issue}</td>
+          <td>${patient.date}</td>
+          <td>
+            <button class="action-btn" onclick="editPatient(${index})">Edit</button>
+            <button class="action-btn delete-btn" onclick="deletePatient(${index})">Delete</button>
+          </td>
+        `;
+
+        tableBody.appendChild(row);
+      });
+      detailsTable.style.display = patients.length > 0 ? "block" : "none";
+    }
+
+    window.editPatient = function(index) {
+      const patient = patients[index];
+      document.getElementById("name").value = patient.name;
+      document.getElementById("age").value = patient.age;
+      document.getElementById("gender").value = patient.gender;
+      document.getElementById("contact").value = patient.contact;
+      document.getElementById("address").value = patient.address;
+      document.getElementById("city").value = patient.city;
+      document.getElementById("department").value = patient.department;
+      document.getElementById("issue").value = patient.issue;
+      editIndex.value = index;
+    }
+
+    window.deletePatient = function(index) {
+      if (confirm("Are you sure you want to delete this record?")) {
+        patients.splice(index, 1);
+        displayPatients();
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+    <!-- footer -->
+
+   <div class="main-footer">
+        
+
+            <div class="footer-content">
+                
+                </div>
+            </div>
+
+            <div class="footer-content">
+               
+            </div>
+
+            <div class="footer-content">
+                
+            </div>
+
+            <div class="footer-content">
+                
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <!-- footer ended -->
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
