@@ -17,7 +17,7 @@ The project is responsive and user-friendly.
 - HTML
 - CSS
 - JavaScript
-- 
+  
 
 ## 🌐 Live Website:
 👉 https://gayatrikanase12.github.io/Hospital_Management_System/Specilties.html
